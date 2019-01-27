@@ -1,0 +1,1114 @@
+focus_tree = { 
+id = iowa
+country = { 
+factor = 0 
+modifier = { 
+add = 10 
+tag = IAI 
+} 
+} 
+#Focus for The Eastern Menace
+focus = { 
+id = IAI_theeasternmenace
+icon = GFX_goal_generic_demand_territory
+x = 30
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_conquerwisconsin } 
+mutually_exclusive = { focus = IAI_inviteillinois } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+create_wargoal= { 
+type = annex_everything 
+target = ILI
+}
+ } 
+
+ } 
+
+#Focus for March to St. Paul
+focus = { 
+id = IAI_marchtostpaul
+icon = GFX_goal_generic_political_pressure
+x = 24
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_conquersouthdakota } 
+prerequisite = { focus = IAI_dualmonarchywithnebraska } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+create_wargoal= { 
+type = annex_everything 
+target = MNM
+}
+ } 
+
+ } 
+
+#Focus for The Northern Menace
+focus = { 
+id = IAI_thenorthernmenace
+icon = GFX_goal_generic_demand_territory
+x = 26
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_conquernebraska } 
+prerequisite = { focus = IAI_conquersouthdakota } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+create_wargoal= { 
+type = annex_everything 
+target = MNM
+}
+ } 
+
+ } 
+
+#Focus for Conquer South Dakota
+focus = { 
+id = IAI_conquersouthdakota
+icon = GFX_goal_generic_small_arms
+x = 28
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_crownaking focus = IAI_keepamilitarygovernment } 
+mutually_exclusive = { focus = IAI_conquersouthdakota } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+create_wargoal= { 
+type = annex_everything 
+target = SDS
+}
+ } 
+
+ } 
+
+#Focus for Invite Illinois
+focus = { 
+id = IAI_inviteillinois
+icon = GFX_goal_tripartite_pact
+x = 14
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_amidwesternunion } 
+mutually_exclusive = { focus = IAI_theeasternmenace } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_to_faction= ILI
+ } 
+
+ } 
+
+#Focus for Invite Wisconsin
+focus = { 
+id = IAI_invitewisconsin
+icon = GFX_goal_tripartite_pact
+x = 16
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_amidwesternunion } 
+mutually_exclusive = { focus = IAI_conquerwisconsin } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_to_faction= WIW
+ } 
+
+ } 
+
+#Focus for Conquer Nebraska
+focus = { 
+id = IAI_conquernebraska
+icon = GFX_goal_generic_small_arms
+x = 26
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_keepamilitarygovernment focus = IAI_crownaking } 
+mutually_exclusive = { focus = IAI_dualmonarchywithnebraska } 
+mutually_exclusive = { focus = IAI_invitenebraska } 
+mutually_exclusive = { focus = IAI_ } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+create_wargoal= { 
+type = annex_everything 
+target = NEN
+}
+ } 
+
+ } 
+
+#Focus for Invite Nebraska
+focus = { 
+id = IAI_invitenebraska
+icon = GFX_goal_tripartite_pact
+x = 18
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_amidwesternunion } 
+mutually_exclusive = { focus = IAI_conquernebraska } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_to_faction= NEN
+ } 
+
+ } 
+
+#Focus for Invite South Dakota
+focus = { 
+id = IAI_invitesouthdakota
+icon = GFX_goal_tripartite_pact
+x = 20
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_amidwesternunion } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_to_faction= SDS
+ } 
+
+ } 
+
+#Focus for A Midwestern Union
+focus = { 
+id = IAI_amidwesternunion
+icon = GFX_goal_molotov_ribbentrop_pact
+x = 17
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_stickwithdemocracy focus = IAI_unitedstatesofiowa } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Double Down on Agriculture
+focus = { 
+id = IAI_doubledownonagriculture
+icon = GFX_goal_generic_positive_trade_relations
+x = 21
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_volunteeronly focus = IAI_introduceconscription } 
+mutually_exclusive = { focus = IAI_anindustrializedstate } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_manpower= 100000
+ } 
+
+ } 
+
+#Focus for Volunteer Only
+focus = { 
+id = IAI_volunteeronly
+icon = GFX_goal_tfv_can_compromise_with_quebec
+x = 21
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_policiesofthenewnation } 
+mutually_exclusive = { focus = IAI_introduceconscription } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_stability= 0.05add_political_power= 50
+ } 
+
+ } 
+
+#Focus for An Industrialized State
+focus = { 
+id = IAI_anindustrializedstate
+icon = GFX_goal_generic_construct_civilian
+x = 19
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_introduceconscription focus = IAI_volunteeronly } 
+mutually_exclusive = { focus = IAI_doubledownonagriculture } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_tech_bonus = {
+				name = industrialized_state
+				bonus = 0.5
+				uses = 2
+				category = industry
+adhead_reduction = .5
+			}
+ } 
+
+ } 
+
+#Focus for Introduce Conscription
+focus = { 
+id = IAI_introduceconscription
+icon = GFX_goal_tfv_can_forced_quebec_conscription
+x = 19
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_policiesofthenewnation } 
+mutually_exclusive = { focus = IAI_volunteeronly } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_ideas = military_youth_focus
+ } 
+
+ } 
+
+#Focus for Policies of the New Nation
+focus = { 
+id = IAI_policiesofthenewnation
+icon = GFX_goal_tripartite_pact
+x = 20
+y = 3
+cost = 1
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_draftanewconstitution } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_political_power= 100
+ } 
+
+ } 
+
+#Focus for Stick With Democracy
+focus = { 
+id = IAI_stickwithdemocracy
+icon = GFX_goal_support_democracy
+x = 22
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_draftanewconstitution } 
+mutually_exclusive = { focus = IAI_crownaking } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_popularity= { 
+ideology = democratic 
+popularity = 0.15 
+}
+ } 
+
+ } 
+
+#Focus for Crown a King
+focus = { 
+id = IAI_crownaking
+icon = GFX_goal_tfv_strengthen_commonwealth_ties
+x = 24
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_draftanewconstitution focus = IAI_marchondesmoines } 
+mutually_exclusive = { focus = IAI_keepamilitarygovernment } 
+mutually_exclusive = { focus = IAI_stickwithdemocracy } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+
+ }
+add_popularity= { 
+ideology = neutrality
+popularity = 0.70 
+}
+ } 
+
+ } 
+
+#Focus for Dual Monarchy with Nebraska
+focus = { 
+id = IAI_dualmonarchywithnebraska
+icon = GFX_goal_tfv_strengthen_commonwealth_ties
+x = 24
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_crownaking } 
+mutually_exclusive = { focus = IAI_conquernebraska } 
+ai_will_do = { 
+ factor = 1
+ } 
+bypass = { 
+NEN = { exists = no }
+ } 
+completion_reward = { 
+puppet = NEN
+ } 
+
+ } 
+
+#Focus for Storm the Capitol
+focus = { 
+id = IAI_stormthecapitol
+icon = GFX_goal_support_communism
+x = 28
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_riotsinthestreets } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+ } 
+
+ } 
+
+#Focus for March on Des Moines
+focus = { 
+id = IAI_marchondesmoines
+icon = GFX_focus_generic_little_entente
+x = 24
+y = 2
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_amilitaryjunta } 
+mutually_exclusive = { focus = IAI_draftanewconstitution } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+ } 
+
+ } 
+
+#Focus for United States of Iowa
+focus = { 
+id = IAI_unitedstatesofiowa
+icon = GFX_goal_anschluss
+x = 18
+y = 2
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_thegovernorstepsup } 
+mutually_exclusive = { focus = IAI_draftanewconstitution } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_stability= 0.05add_popularity= { 
+ideology = democratic 
+popularity = 0.20 
+}
+ } 
+
+ } 
+
+#Focus for Draft a New Constitution
+focus = { 
+id = IAI_draftanewconstitution
+icon = GFX_goal_generic_forceful_treaty
+x = 22
+y = 2
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_amilitaryjunta focus = IAI_thegovernorstepsup } 
+mutually_exclusive = { focus = IAI_unitedstatesofiowa } 
+mutually_exclusive = { focus = IAI_marchondesmoines } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_political_power= 75
+ } 
+
+ } 
+
+#Focus for Anti-Fascist Radicals
+focus = { 
+id = IAI_antifascistradicals
+icon = GFX_focus_prc_agrarian_socialism
+x = 28
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_shockfromthecollapse } 
+mutually_exclusive = { focus = IAI_thegovernorstepsup } 
+mutually_exclusive = { focus = IAI_amilitaryjunta } 
+mutually_exclusive = { focus = IAI_ } 
+ai_will_do = { 
+ factor = 1
+ } 
+available = { 
+OR = {
+				has_government = democratic
+				has_government = neutrality
+
+has_government = communism
+
+			}
+ } 
+completion_reward = { 
+add_stability= -0.05add_popularity= { 
+ideology = communism 
+popularity = 0.15 
+}
+ } 
+
+ } 
+
+#Focus for A Standing Army
+focus = { 
+id = IAI_astandingarmy
+icon = GFX_focus_generic_strike_at_democracy1
+x = 0
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_thenationalgaurd } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_manpower= 150000
+ } 
+
+ } 
+
+#Focus for A Military Junta
+focus = { 
+id = IAI_amilitaryjunta
+icon = GFX_focus_secret_rearmament
+x = 24
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_shockfromthecollapse } 
+mutually_exclusive = { focus = IAI_thegovernorstepsup } 
+mutually_exclusive = { focus = IAI_antifascistradicals } 
+ai_will_do = { 
+ factor = 1
+ } 
+available = { 
+OR = {
+				has_government = democratic
+				has_government = neutrality
+
+has_government = fascism
+			}
+ } 
+completion_reward = { 
+add_stability= 0.05add_popularity= { 
+ideology = fascism 
+popularity = 0.1 
+}
+ } 
+
+ } 
+
+#Focus for The Governor Steps Up
+focus = { 
+id = IAI_thegovernorstepsup
+icon = GFX_focus_generic_the_giant_wakes
+x = 20
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_shockfromthecollapse } 
+mutually_exclusive = { focus = IAI_amilitaryjunta } 
+mutually_exclusive = { focus = IAI_antifascistradicals } 
+ai_will_do = { 
+ factor = 1
+ } 
+available = { 
+OR = {
+				has_government = democratic
+				has_government = neutrality
+			}
+ } 
+completion_reward = { 
+retire_country_leader= yesadd_popularity= { 
+ideology = democratic
+popularity = 0.1 
+}
+add_stability= 0.10
+ } 
+
+ } 
+
+#Focus for Riots in the Streets
+focus = { 
+id = IAI_riotsinthestreets
+icon = GFX_focus_YUG_pan_slavic_congress
+x = 28
+y = 2
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_antifascistradicals } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_stability= -0.05add_popularity= { 
+ideology = communism 
+popularity = 0.1 
+}
+add_political_power= 50
+ } 
+
+ } 
+
+#Focus for The Army
+focus = { 
+id = IAI_thearmy
+icon = GFX_goal_generic_axis_build_infantry
+x = 2
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+army_experience= 25
+ } 
+
+ } 
+
+#Focus for The National Gaurd
+focus = { 
+id = IAI_thenationalgaurd
+icon = GFX_focus_generic_commonwealth_build_infantry
+x = 0
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_thearmy } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_manpower= 50000add_equipment_to_stockpile= {
+ type = infantry_equipment_1  
+amount = 10000 
+producer = USA 
+}
+ } 
+
+ } 
+
+
+
+#Focus for Shock From The Collapse
+focus = { 
+id = IAI_shockfromthecollapse
+icon = GFX_focus_generic_strike_at_democracy2
+x = 24
+y = 0
+cost = 2
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_stability= -0.10
+ } 
+
+ } 
+
+#Focus for Industrial Complexes
+focus = { 
+id = IAI_industrialcomplexes
+icon = GFX_goal_generic_construct_infrastructure
+x = 11
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_industrialeffort } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+ } 
+
+ } 
+
+#Focus for Arms Factories
+focus = { 
+id = IAI_armsfactories
+icon = GFX_goal_generic_construct_mil_factory
+x = 13
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_industrialeffort } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+ } 
+
+ } 
+
+#Focus for Powered By Ethanol
+focus = { 
+id = IAI_poweredbyethanol
+icon = GFX_goal_generic_oil_refinery
+x = 15
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_industrialeffort } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+ } 
+
+ } 
+
+#Focus for A growing need
+focus = { 
+id = IAI_agrowingneed
+icon = GFX_goal_generic_oil_refinery
+x = 15
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_poweredbyethanol } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+ } 
+
+ } 
+
+#Focus for A robust economy
+focus = { 
+id = IAI_arobusteconomy
+icon = GFX_goal_generic_oil_refinery
+x = 15
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_agrowingneed } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+ } 
+
+ } 
+
+#Focus for More Arms Factories
+focus = { 
+id = IAI_morearmsfactories
+icon = GFX_goal_generic_construct_mil_factory
+x = 13
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_armsfactories } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+ } 
+
+ } 
+
+#Focus for Even More Arms Factories
+focus = { 
+id = IAI_evenmorearmsfactories
+icon = GFX_goal_generic_construct_mil_factory
+x = 13
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_morearmsfactories } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+ } 
+
+ } 
+
+#Focus for More Industrial Complexes
+focus = { 
+id = IAI_moreindustrialcomplexes
+icon = GFX_goal_generic_construct_civ_factory
+x = 11
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_industrialcomplexes } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+ } 
+
+ } 
+
+#Focus for Even More Industrial Complexes
+focus = { 
+id = IAI_evenmoreindustrialcomplexes
+icon = GFX_goal_generic_construct_civ_factory
+x = 11
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_moreindustrialcomplexes } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+ } 
+
+ } 
+
+#Focus for Fighter Focus
+focus = { 
+id = IAI_fighterfocus
+icon = GFX_goal_generic_air_fighter2
+x = 7
+y = 1
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_iowanairforce } 
+mutually_exclusive = { focus = IAI_bomberfocus } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.5
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+ } 
+
+ } 
+
+#Focus for Nuclear Weapons
+focus = { 
+id = IAI_nuclearweapons
+icon = GFX_focus_wonderweapons
+x = 8
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_secretweapons } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 0.6
+				category = nuclear
+			}
+ } 
+
+ } 
+
+#Focus for Bomber Focus
+focus = { 
+id = IAI_bomberfocus
+icon = GFX_goal_generic_air_bomber
+x = 9
+y = 1
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_iowanairforce } 
+mutually_exclusive = { focus = IAI_fighterfocus } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.5
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+ } 
+
+ } 
+
+#Focus for Industrial Effort
+focus = { 
+id = IAI_industrialeffort
+icon = GFX_goal_generic_production
+x = 13
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+ } 
+
+ } 
+
+#Focus for Iowan Air Force
+focus = { 
+id = IAI_iowanairforce
+icon = GFX_goal_generic_air_fighter2
+x = 8
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+ } 
+
+ } 
+
+#Focus for Secret Weapons
+focus = { 
+id = IAI_secretweapons
+icon = GFX_focus_rocketry
+x = 8
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_fighterfocus focus = IAI_bomberfocus } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_tech_bonus = {
+				name = secret_bonus
+				bonus = 0.5
+				uses = 4
+				category = electronics
+				category = nuclear
+				category = rocketry
+			}
+ } 
+
+ } 
+
+#Focus for Tactics and Strategy
+focus = { 
+id = IAI_tacticsandstrategy
+icon = GFX_goal_generic_army_doctrines
+x = 4
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_infantryequipmentfocus } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Motorized Focus
+focus = { 
+id = IAI_motorizedfocus
+icon = GFX_goal_generic_army_motorized
+x = 2
+y = 1
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_thearmy } 
+ai_will_do = { 
+ factor = 1
+ } 
+bypass = { 
+can_research= mechanised_infantry
+ } 
+completion_reward = { 
+add_tech_bonus= {
+ bonus = 0.75
+uses = 1 
+category = motorised_infantry
+}
+ } 
+
+ } 
+
+#Focus for Infantry Equipment Focus
+focus = { 
+id = IAI_infantryequipmentfocus
+icon = GFX_goal_generic_amphibious_assault
+x = 4
+y = 1
+cost = 1
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_thearmy } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_tech_bonus= {
+ bonus = 0.5
+uses = 2
+category = infantry_weapons
+}
+ } 
+
+ } 
+
+#Focus for Keep a Military Government
+focus = { 
+id = IAI_keepamilitarygovernment
+icon = GFX_goal_generic_military_sphere
+x = 26
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_marchondesmoines } 
+mutually_exclusive = { focus = IAI_crownaking } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_political_power= 75add_popularity= { 
+ideology = fascism 
+popularity = 0.1 
+}
+ } 
+
+ } 
+
+#Focus for Conquer Wisconsin
+focus = { 
+id = IAI_conquerwisconsin
+icon = GFX_goal_generic_small_arms
+x = 30
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = IAI_crownaking focus = IAI_keepamilitarygovernment } 
+mutually_exclusive = { focus = IAI_invitewisconsin } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+create_wargoal= { 
+type = annex_everything 
+target = WIW
+}
+ } 
+
+ } 
+
+#End of focuses 
+ }

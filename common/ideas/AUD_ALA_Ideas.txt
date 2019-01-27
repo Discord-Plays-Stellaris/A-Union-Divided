@@ -1,0 +1,9 @@
+#### Alabama Ideas ####
+
+ideas = {
+
+##############
+# Country ideas
+##############
+
+}

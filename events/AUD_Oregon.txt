@@ -1,0 +1,56 @@
+add_namespace = oregon
+
+country_event = {# President Martin's Address
+	id = oregon.1
+	title = oregon.1.t
+	desc = oregon.1.d
+	picture = GFX_USA_riot
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ORO
+		date > 1936.2.14
+	}
+
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	option = { #Continue the Republic
+		name = oregon.1.a
+		add_stability = -0.05
+		set_country_flag = ondp_democracy
+	}
+	
+	option = { #Establish the Junta
+		name = oregon.2.a 
+		add_stability = 0.05
+		set_country_flag = ondp_junta
+		set_politics = { 
+			ruling_party = authoritarianism elections_allowed = no 
+			parties = {
+				social_democracy = {
+					popularity = 29
+				}
+				liberalism = {
+					popularity = 32
+				}
+				conservatism = { 
+					popularity = 17
+				}
+				authoritarianism = {
+					popularity = 22
+				}	
+			}
+		}
+		create_country_leader = {
+				name = "Charles H. Martin"
+				desc = "POLITICS_CHARLES_MARTIN_DESC"
+				picture = "Portrait_Oregon_Charles_H_Martin.tga"
+				expire = "1965.1.1"
+				ideology = military_leader
+				traits = {}
+		}
+	}
+	

@@ -114,17 +114,44 @@ set_stability = 0.9
 set_politics = {
 
 	parties = {
-		democratic = { 
-			popularity = 99
+		communism = { 
+			popularity = 0
+		}
+
+		revolutionary_socialism = {
+			popularity = 1
+		}
+		
+		democratic_socialism = {
+			popularity = 1
+		}
+
+		social_democracy = {
+			popularity = 5
+		}
+
+		liberalism = {
+			popularity = 15
+		}
+
+		centrism = {
+			popularity = 30
+		}
+
+		conservatism = {
+			popularity = 46
+		}
+
+		authoritarianism = {
+			popularity = 2
+		}
+
+		nationalism = {
+			popularity = 1
 		}
 
 		fascism = {
 			popularity = 0
-		}
-		
-		communism = {
-			popularity = 1
-			#banned = no #default is no
 		}
 	}
 	

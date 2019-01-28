@@ -155,7 +155,7 @@ set_politics = {
 		}
 	}
 	
-	ruling_party = democratic
+	ruling_party = conservatism
 	last_election = "1932.11.8"
 	election_frequency = 48
 	elections_allowed = yes
@@ -169,24 +169,84 @@ add_ideas = {
 	set_politics = {
 
 		parties = {
-			democratic = { 
-				popularity = 99
+			communism = { 
+				popularity = 0
+			}
+
+			revolutionary_socialism = {
+				popularity = 1
+			}
+		
+			democratic_socialism = {
+				popularity = 1
+			}
+
+			social_democracy = {
+				popularity = 5
+			}
+
+			liberalism = {
+				popularity = 15
+			}
+
+			centrism = {
+				popularity = 30
+			}
+
+			conservatism = {
+				popularity = 46
+			}
+
+			authoritarianism = {
+				popularity = 2
+			}
+
+			nationalism = {
+				popularity = 1
 			}
 
 			fascism = {
 				popularity = 0
 			}
-			
-			communism = {
-				popularity = 1
-				#banned = no #default is no
-			}
 		}
-		
-		ruling_party = democratic
-		last_election = "1936.11.3"
+	
+		ruling_party = conservatism
+		last_election = "1932.11.8"
 		election_frequency = 48
 		elections_allowed = yes
+	}
+}
+
+create_country_leader = {
+	name = "Matthew Taylor"
+	desc = ""
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+	expire = "1953.3.1"
+	ideology = social_conservative
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Henry Bramel"
+	desc = ""
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_4.dds"
+	expire = "1953.3.1"
+	ideology = centrist
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Harvey Markin"
+	desc = ""
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_6.dds"
+	expire = "1953.3.1"
+	ideology = social_liberal
+	traits = {
+		
 	}
 }
 
